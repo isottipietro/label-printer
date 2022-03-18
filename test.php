@@ -5,13 +5,13 @@
 require __DIR__ . '/template.php';
 $file = __DIR__ . '/templates/row-template.php';
 
-$rows = array( "id" => 1, "name" => 'first row', 'etc' => 'and more...');
+$rows = array( 'id' => 1, 'name' => 'first row', 'etc' => 'and more...');
 
-echo "uno";
+echo 'uno';
 
 $output = '';
 
-echo "2";
+echo '2';
 
 
 $output.= template( $file, $rows );
