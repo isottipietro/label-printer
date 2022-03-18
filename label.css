@@ -7,8 +7,16 @@ body {
 	width: 200px;
 }
 
-#patient, #signature {
-	font-size: 0.9em;
+#patient {
+	font-size: 0.8em;
+	border-bottom: solid;
+	border-bottom-width: thin;
+}
+
+#signature {
+	font-size: 0.8em;
+	border-top: solid;
+	border-top-width: thin;
 }
 
 
@@ -22,18 +30,38 @@ body {
 	font-size: 26px;
 	margin-bottom: -10px;
 }
+#drug {
+	padding: 5px 0 5px 0;
+}
 
-.Diluizione {
-	font-size: 1.2em;
+#preparation {
+	font-size: 1em;
+}
+
+.warning {
+	color: white;
+	background: black;
+}
+.warning2 {
+	background: repeating-linear-gradient(-45deg, #000000, #000000 5px, white 5px, white 10px);
+}
+.warning3 {
+	color: black;
+	background: white;
 }
 	
-.drugname {
-	padding: 5px 0 5px 0; 
+#drugname {
+	padding: 0 1px 0 1px; 
 	font-weight: 900;
-	font-size: 2.5em;
+	font-size: 1.7em;
 	display: block;
 	white-space: nowrap;
 	overflow: hidden;
+}
+
+#preparation .dilution {
+	float: right;
+	font-size: 0.8em;
 }
 
 @page {
@@ -41,7 +69,7 @@ body {
 	size: auto;
 }
 	
-div.Etichetta {
+#item {
 	display: inline-block;
 }
 
