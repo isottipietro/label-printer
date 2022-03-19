@@ -70,22 +70,14 @@
   <h2>Label Form Example</h2>
   <p><span class="error">* required field</span></p>
   <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-    Patient Name: <input type="text" name="PtName" value="<?php echo $PtName;?>">
-    <span class="error">* <?php echo $nameErr;?></span>
-    <br>
-    Patient ID: <input type="number" name="PtId" min="2022000000" max="2123000000" value="<?php echo $PtId;?>">
-    <span class="error">* <?php echo $PtIdErr;?></span>
-    <br>
-   Nurse: <input type="text" name="Nurse" value="<?php echo $Nurse;?>">
-    <span class="error"><?php echo $NurseErr;?></span>
-    <br>
-		Drug: <select id="Drugs" name="Drugs">
-			<option value="NORADRENALINA">Noradrenalina</option>
-			<option value="EPARINA">Eparina</option>
-			<option value="MIDAZOLAM">Midazolam</option>
-			<option value="ROCURONIO">Rocuronio</option>
-		</select>
-   <br><br>
+    Patient Name: <input type="text" name="input[patientName]" value="<?php echo $input[patientName];?>">
+    Patient ID: <input type="number" name="input[patientID]" min="2022000000" max="2123000000" value="<?php echo $input[patientID];?>">
+	Drug Name: <input type="text" name="input[drugName]" value="<?php echo $input[drugName];?>">
+	Drug Concentration: <input type="text" name="input[drugConc]" value="<?php echo $input[drugConc];?>">
+	Drug Dilution: <input type="text" name="input[drugDil]" value="<?php echo $input[drugDil];?>">
+   Nurse: <input type="text" name="input[signOper]" value="<?php echo $input[signOper];?>">
+Timestamp: <input type="text" name="input[signTime]" value="<?php echo $input[signTime];?>">
+   <br>
     <input type="submit" name="submit" value="Submit">  
   </form>
 
@@ -101,9 +93,9 @@
     echo "<br>";
     echo $gender;
 	  
-	$row = array( 'ptName' => 1, 'ptId' => 'first row', 'nurse' => 'and more...');
+	//$row = array( 'ptName' => 1, 'ptId' => 'first row', 'nurse' => 'and more...');
 	$output = '';
-	$output.= template( $file, $row );
+	$output.= template( $file, $input );
 	print $output;
   ?>
 
