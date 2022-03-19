@@ -12,7 +12,8 @@
     $PtNameErr = $PtIdErr = $NurseErr = $DrugErr = "";
     $PtName = $PtId = $Nurse = $Drug = $Prep = "";
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Input validation
+    /*if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if (empty($_POST["PtName"])) {
         $PtNameErr = "Patient name is required";
       } else {
@@ -54,7 +55,7 @@
       } else {
         $Drug = test_input($_POST["Drug"]);
       }
-    }
+    }*/
 
     function test_input($data) {
       $data = trim($data);
@@ -69,20 +70,19 @@
   <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
     Patient Name: <input type="text" name="PtName" value="<?php echo $PtName;?>">
     <span class="error">* <?php echo $nameErr;?></span>
-    <br><br>
-    Patient ID: <input type="text" name="PtId" value="<?php echo $PtId;?>">
+    <br>
+    Patient ID: <input type="number" name="PtId" min="2022000000" max="2123000000" value="<?php echo $PtId;?>">
     <span class="error">* <?php echo $PtIdErr;?></span>
-    <br><br>
+    <br>
    Nurse: <input type="text" name="Nurse" value="<?php echo $Nurse;?>">
     <span class="error"><?php echo $NurseErr;?></span>
-    <br><br>
-    Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-   <br><br>
-    Gender:
-    <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
-   <span class="error">* <?php echo $genderErr;?></span>
+    <br>
+		Drug: <select id="Drugs" name="Drugs">
+			<option value="NORADRENALINA">Noradrenalina</option>
+			<option value="EPARINA">Eparina</option>
+			<option value="MIDAZOLAM">Midazolam</option>
+			<option value="ROCURONIO">Rocuronio</option>
+		</select>
    <br><br>
     <input type="submit" name="submit" value="Submit">  
   </form>
