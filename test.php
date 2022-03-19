@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <html>
-<body>
-<?php
-require __DIR__ . '/template.php';
-$file = __DIR__ . '/templates/row-template.php';
+	<body>
+		<?php
+			require __DIR__ . '/generator.php';
+			$file = __DIR__ . '/templates/row-template.php';
 
-$rows = array( 'id' => 1, 'name' => 'first row', 'etc' => 'and more...');
+			$rows = array( 'id' => 1, 'name' => 'first row', 'etc' => 'and more...');
 
-echo 'uno';
+			$output = '';
 
-$output = '';
+			$output.= template( $file, $rows );
 
-echo '2';
-
-
-$output.= template( $file, $rows );
-
-
-print $output;
-?>
-
-</body>
+			print $output;
+		?>
+	</body>
 </html>
