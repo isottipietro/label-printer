@@ -8,6 +8,8 @@
   <body>  
 
   <?php
+	require __DIR__ . '/generator.php';
+	$file = __DIR__ . '/templates/label-template.php';
     // define variables and set to empty values
     $PtNameErr = $PtIdErr = $NurseErr = $DrugErr = "";
     $PtName = $PtId = $Nurse = $Drug = $Prep = "";
