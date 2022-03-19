@@ -83,15 +83,15 @@ Timestamp: <input type="text" name="input[signTime]" value="<?php echo $input[si
 
   <?php
     echo "<h2>Your Input:</h2>";
-    echo $PtName;
+    echo $input[patientName];
     echo "<br>";
-    echo $PtId;
+    echo $input[patientID];
     echo "<br>";
-    echo $Nurse;
+    echo $input[drugName];
     echo "<br>";
-    echo $comment;
+    echo $input[drugConc];
     echo "<br>";
-    echo $gender;
+    echo $input[drugDil];
 	  
 	//$row = array( 'ptName' => 1, 'ptId' => 'first row', 'nurse' => 'and more...');
 	$output = '';
