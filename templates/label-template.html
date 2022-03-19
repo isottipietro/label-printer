@@ -10,27 +10,19 @@
 <body>
 	<div id="item">
 		<div id="patient">
-			<p>Nome Cognome<span class="id">2022001234</span></p>
-			<p class="barcode">2022001234</p>
+			<p><?php print $patientName; ?><span class="id"><?php print $patientID; ?></span></p>
+			<p class="barcode"><?php print $patientID; ?></p>
 		</div>
-		<div id="drug" class="">
-			<p id="drugname" class="">MIDAZOLAM</p>
-			<div id="preparation" class="">
-				<p class="conc">[1 mg/ml]<span class="dilution">50mg/50ml SF</span></p>
+		<div id="drug" class="<?php print $warning1; ?>">
+			<p id="drugname" class="<?php print $warning2; ?>"><?php print $drugName; ?></p>
+			<div id="preparation" class="<?php print $warning2; ?>">
+				<p class="conc"><?php print $drugConc; ?><span class="dilution"><?php print $drugDil; ?></span></p>
 			</div>
 		</div>
 		<div id="signature">
-		<p>Cognome<span class="timestamp"><span id="date"></span></span></p>
+		<p><?php print $signOper; ?><span class="timestamp"><?php print $signTime; ?></span></p>
 		</div>
 	</div>
-<script>
-n =  new Date();
-y = n.getFullYear();
-m = n.getMonth() + 1;
-d = n.getDate();
-t = n.getHours() + ":" + n.getMinutes();
-document.getElementById("date").innerHTML = d + "/" + m + "/" + y + " - " + t;
-</script>
 <div class="pagebreak"> </div>
 </body>
 </html>
