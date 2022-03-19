@@ -2,9 +2,9 @@
 /**
  * Simple Templating function
  *
- * @param $file   - Path to the PHP file that acts as a template.
+ * @param $file   - Path to the file that acts as a template.
  * @param $args   - Associative array of variables to pass to the template file.
- * @return string - Output of the template file. Likely HTML.
+ * @return string - Output of the template file.
  */
 function template( $file, $args ){
   // ensure the file exists
