@@ -100,6 +100,11 @@
     echo $comment;
     echo "<br>";
     echo $gender;
+	  
+	$row = array( 'ptName' => 1, 'ptId' => 'first row', 'nurse' => 'and more...');
+	$output = '';
+	$output.= template( $file, $row );
+	print $output;
   ?>
 
 </body>
