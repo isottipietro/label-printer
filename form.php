@@ -60,18 +60,18 @@
       }
     }*/
 
-    function test_input($data) {
+    /*function test_input($data) {
       $data = trim($data);
       $data = stripslashes($data);
       $data = htmlspecialchars($data);
       return $data;
-    }
+    }*/
   ?>
 
   <h2>Label Form Example</h2>
   <p><span class="error">* required field</span></p>
   <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-    Patient Name: <input type="text" name="input[patientName]" value="<?php echo $input[patientName];?>">
+    Patient Name: <input type="text" name="input[patientName]">
     Patient ID: <input type="number" name="input[patientID]" min="2022000000" max="2123000000" value="<?php echo $input[patientID];?>">
 	Drug Name: <input type="text" name="input[drugName]" value="<?php echo $input[drugName];?>">
 	Drug Concentration: <input type="text" name="input[drugConc]" value="<?php echo $input[drugConc];?>">
