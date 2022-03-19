@@ -11,6 +11,7 @@
 	require __DIR__ . '/generator.php';
 	$file = __DIR__ . '/templates/label-template.php';
     // define variables and set to empty values
+	  $input = array("patientName" => "", "patientID" => "", "drugName" => "", "drugConc" => "", "drugDil" => "", "signOper" => "", "signTime" => "");
     $PtNameErr = $PtIdErr = $NurseErr = $DrugErr = "";
     $PtName = $PtId = $Nurse = $Drug = $Prep = "";
 
