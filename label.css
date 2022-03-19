@@ -17,6 +17,7 @@ body {
 	font-size: 0.8em;
 	border-top: solid;
 	border-top-width: thin;
+	padding-top: 5px;
 }
 
 
@@ -28,10 +29,10 @@ body {
 	text-align: center;
 	font-family: 'Libre Barcode 128';
 	font-size: 26px;
-	margin-bottom: -10px;
+	margin-bottom: -5px;
 }
 #drug {
-	padding: 5px 0 5px 0;
+	padding: 9px 0 9px 0;
 }
 
 #preparation {
@@ -65,12 +66,14 @@ body {
 }
 
 @page {
-	margin: 5px 5px 5px 20px;
+	margin: 3px 0 0 0;
 	size: auto;
 }
 	
 #item {
 	display: inline-block;
+	padding: 7px;
+	width: 200px;
 }
 
 @media print {
