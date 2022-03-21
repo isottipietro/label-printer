@@ -1,0 +1,90 @@
+* {
+	font-family: "Roboto Condensed";
+	margin: 0;
+}
+
+body {
+	width: 200px;
+}
+
+#item {
+	display: inline-block;
+	padding: 7px;
+	width: 200px;
+}
+
+/* Patient identification section */
+#patient {
+	font-size: 0.8em;
+	border-bottom: solid;
+	border-bottom-width: thin;
+	text-transform: capitalize;
+}
+
+#patient .barcode {
+	text-align: center;
+	font-family: 'Libre Barcode 128';
+	font-size: 26px;
+	margin-bottom: -5px;
+}
+
+/* Signature and timestamp section */
+#signature {
+	font-size: 0.8em;
+	border-top: solid;
+	border-top-width: thin;
+	padding-top: 5px;
+	text-transform: uppercase;
+}
+
+#patient .id, #signature .timestamp {
+	float: right;
+}
+
+/* Drug specification section */
+#drug {
+	padding: 9px 0 9px 0;
+}
+
+#drugname {
+	padding: 0 1px 0 1px;
+	font-weight: 900;
+	font-size: 1.7em;
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-transform: uppercase;
+	background: white;
+}
+
+#preparation {
+	font-size: 1em;
+	background: white;
+}
+
+#preparation .dilution {
+	float: right;
+	font-size: 0.8em;
+}
+
+/* Highlighting of drug section for more attention */
+.warning {
+	color: white !important;
+	background: black !important;
+}
+.warning2 {
+	background: repeating-linear-gradient(-45deg, #000000, #000000 5px, white 5px, white 10px);
+}
+
+/* Printing page settings */
+@page {
+	margin: 3px 0 0 0;
+	size: auto;
+}
+
+@media print {
+    .pagebreak {
+        clear: both;
+        page-break-after: always;
+    }
+}

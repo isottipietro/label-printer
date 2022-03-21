@@ -1,4 +1,4 @@
 <footer id="footer-container">
-
-    <p>Copyright &copy; <?php echo date( 'y' ); ?> - Pietro Isotti</p>
+<hr>
+  <p>Copyright &copy; <?php echo date( 'y' ); ?> - Pietro Isotti</p>
 </footer>

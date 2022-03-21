@@ -6,7 +6,7 @@
  * @param $args   - Associative array of variables to pass to the template file.
  * @return string - Output of the template file.
  */
-function template( $file, $args ){
+function generate( $file, $args ){
   // ensure the file exists
   if ( !file_exists( $file ) ) {
     return '';
@@ -22,22 +22,4 @@ function template( $file, $args ){
     include $file;
   return ob_get_clean();
 }
-
-//debug
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-$_POST["signTime"] = date("d/m/y-H:i");
-
-$file = __DIR__ . '/templates/label-template.php';
-$output = '';
-$output.= template( $file, $_POST );
-print $output;
 ?>
-<script type="text/javascript">
-<!--
-window.print();
-window.onafterprint = window.close;
-//-->
-</script>

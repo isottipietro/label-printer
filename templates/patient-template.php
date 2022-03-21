@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<!-- Template of the patient label -->
 <html lang="en">
 <head>
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto Condensed" />
 	<link href="https://fonts.googleapis.com/css?family=Libre Barcode 128" rel='stylesheet'>
-	<link rel="stylesheet" type="text/css" href="/templates/css/label.css">
+	<link rel="stylesheet" type="text/css" href="/templates/css/patient.css">
 </head>
 
 <body>
