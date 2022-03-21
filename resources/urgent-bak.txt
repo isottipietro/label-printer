@@ -1,0 +1,50 @@
+Array
+(
+    [0] => Array
+        (
+            [patientName] => Emergenza
+            [patientID] => 2022000000
+            [warningDrug] =>
+            [drugName] => Adrenalina
+            [warningDrugPrep] =>
+            [drugConc] => 1mg/ml
+            [drugDose] => 1
+            [drugUnit] => mg
+            [drugVol] => 1
+            [drugDil] => SF
+            [signOper] => Emergenza
+            [signTime] => Emergenza
+        )
+
+    [1] => Array
+        (
+        [patientName] => Emergenza
+        [patientID] => 2022000000
+        [warningDrug] =>
+        [drugName] => Atropina
+        [warningDrugPrep] =>
+        [drugConc] => 1mg/ml
+        [drugDose] => 1
+        [drugUnit] => mg
+        [drugVol] => 1
+        [drugDil] => SF
+        [signOper] => Emergenza
+        [signTime] => Emergenza
+        )
+
+    [2] => Array
+        (
+        [patientName] => Emergenza
+        [patientID] => 2022000000
+        [warningDrug] =>
+        [drugName] => Midazolam
+        [warningDrugPrep] =>
+        [drugConc] => 1mg/ml
+        [drugDose] => 1
+        [drugUnit] => mg
+        [drugVol] => 1
+        [drugDil] => SF
+        [signOper] => Emergenza
+        [signTime] => Emergenza
+        )
+)
