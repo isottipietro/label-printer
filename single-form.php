@@ -5,7 +5,7 @@
   error_reporting(E_ALL);
 
   // define variables and set to empty values
-  $patientName = $patientNameErr = $patientID = $drugName = $drugConc = $drugDil = $signOper = "";
+  $patientName = $patientNameErr = $patientID = $drugName = $drugConc = $drugDil = $signOper = $warningDrug = $warningDrugPrep = $warningDrugName = "";
 
   // Input validation
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -37,14 +37,21 @@
       <option value="mcg">mcg</option>
       <option value="UI">UI</option>
     </select>
-    <input type="range" id="drugVol" name="drugVol" min="50" max="250" value="50" step="50" required> <output name="VolO" for="drugVol">50</output> ml  
+    <input type="range" id="drugVol" name="drugVol" min="50" max="250" value="50" step="50" required> <output name="VolO" for="drugVol">50</output> ml
     <select id="drugDil" name="drugDil" required>
       <option value="NS" selected>Normal Saline</option>
       <option value="G5%">Glucose 5%</option>
     </select>
     <br><br>
-    Final concentration: <input type="text" name="drugConc" id="drugConc" for="drugDose drugVol drugUnit" readonly>
+    Final concentration: <input type="text" name="drugConc" id="drugConc" for="drugDose drugVol drugUnit" readonly style="background : #d3d3d3; border: 0;">
       <br><br>
+    Warning:
+    <input type="hidden" name="warningDrug" value="">
+    <input type="hidden" name="warningDrugPrep" value="">
+    <br><input type="checkbox" id="warningDrug" name="warningDrug" value="warning2">
+    <label for="warningDrug"> Drug warning - Check this option if drug requires special attention</label><br>
+    <input type="checkbox" id="warningDrugPrep" name="warningDrugPrep" value="warning">
+    <label for="warningDrug"> Concentration warning - Check this option if drug solution is not the standard one</label>
   </fieldset>
   <br><br>
   Nurse: <input type="text" name="signOper" value="<?php echo $signOper;?>" placeholder="cognome-123456" required>

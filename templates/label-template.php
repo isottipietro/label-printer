@@ -12,9 +12,9 @@
 			<p><?php print $patientName; ?><span class="id"><?php print $patientID; ?></span></p>
 			<p class="barcode"><?php print $patientID; ?></p>
 		</div>
-		<div id="drug" class="<?php print $warning1; ?>">
-			<p id="drugname" class="<?php print $warning2; ?>"><?php print $drugName; ?></p>
-			<div id="preparation" class="<?php print $warning2; ?>">
+		<div id="drug" class="<?php print $warningDrug; ?>">
+			<p id="drugname" class="<?php print $warningDrug; ?>"><?php print $drugName; ?></p>
+			<div id="preparation" class="<?php print $warningDrugPrep; ?>">
 				<p class="conc">[<?php print $drugConc; ?>]<span class="dilution"><?php print $drugDose; ?><?php print $drugUnit;?>/<?php print $drugVol; ?>ml <?php print $drugDil; ?></span></p>
 			</div>
 		</div>
