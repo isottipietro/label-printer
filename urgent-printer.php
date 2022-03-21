@@ -22,6 +22,7 @@ if ( !file_exists( $origin ) ) {
 
 //generate labels for every iteration and print output
 foreach ($array as $key => $value) {
+  $value["signTime"] = date("d/m/y-H:i");
   $output.= generate( $template, $value );
 }
 print $output;
