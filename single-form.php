@@ -20,7 +20,7 @@
 <form method="post" action="label-generator.php" target="_blank" oninput="VolO.value=Number(drugVol.value);drugConc.value=Number(drugDose.value)/Number(drugVol.value) + drugUnit.value + '/ml'">
   <fieldset>
     <legend>Patient</legend>
-    Patient Name: <input type="text" name="patientName" value="<?php echo $patientName;?>" required>
+    Patient Name: <input type="text" name="patientName" value="<?php echo $patientName;?>" placeholder="Nome Cognome" required>
     <span class="error"><?php echo $patientNameErr;?></span>
     <br><br>
     Patient ID: <input type="number" name="patientID" min="2022000000" max="2123000000" value="<?php echo $patientID;?>" required>
@@ -31,23 +31,23 @@
 	  Drug Name: <input type="text" name="drugName" value="<?php echo $drugName;?>" required>
     <br><br>
     Drug preparation:
-    <input type="number" id="drugDose" name="drugDose">
-    <select id="drugUnit" name="drugUnit">
+    <input type="number" id="drugDose" name="drugDose" min="0" required>
+    <select id="drugUnit" name="drugUnit" required>
       <option value="mg" selected>mg</option>
       <option value="mcg">mcg</option>
       <option value="UI">UI</option>
     </select>
-    <input type="range" id="drugVol" name="drugVol" min="50" max="250" value="50" step="50"><output name="VolO" for="drugVol">50</output> ml 
-    <select id="drugDil" name="drugDil">
+    <input type="range" id="drugVol" name="drugVol" min="50" max="250" value="50" step="50" required> <output name="VolO" for="drugVol">50</output> ml  
+    <select id="drugDil" name="drugDil" required>
       <option value="NS" selected>Normal Saline</option>
       <option value="G5%">Glucose 5%</option>
     </select>
     <br><br>
-    Final concentration: <input type="text" name="drugConc" id="drugConc" for="drugDose drugVol drugUnit" disabled>
+    Final concentration: <input type="text" name="drugConc" id="drugConc" for="drugDose drugVol drugUnit" readonly>
       <br><br>
   </fieldset>
   <br><br>
-  Nurse: <input type="text" name="signOper" value="<?php echo $signOper;?>">
+  Nurse: <input type="text" name="signOper" value="<?php echo $signOper;?>" placeholder="cognome-123456" required>
   <br><br>
   <input type="submit" name="submit" value="Print"> <input type="reset">
 </form>
