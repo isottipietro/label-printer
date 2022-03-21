@@ -11,6 +11,7 @@ body {
 	font-size: 0.8em;
 	border-bottom: solid;
 	border-bottom-width: thin;
+	text-transform: capitalize;
 }
 
 #signature {
@@ -23,7 +24,7 @@ body {
 
 #patient .id, #signature .timestamp {
 	float: right;
-}	
+}
 
 #patient .barcode {
 	text-align: center;
@@ -50,14 +51,15 @@ body {
 	color: black;
 	background: white;
 }
-	
+
 #drugname {
-	padding: 0 1px 0 1px; 
+	padding: 0 1px 0 1px;
 	font-weight: 900;
 	font-size: 1.7em;
 	display: block;
 	white-space: nowrap;
 	overflow: hidden;
+	text-transform: uppercase;
 }
 
 #preparation .dilution {
@@ -69,7 +71,7 @@ body {
 	margin: 3px 0 0 0;
 	size: auto;
 }
-	
+
 #item {
 	display: inline-block;
 	padding: 7px;
