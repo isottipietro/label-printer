@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Template of the patient label -->
-<html lang="en">
+<html lang="it">
 <head>
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto Condensed" />
 	<link href="https://fonts.googleapis.com/css?family=Libre Barcode 128" rel='stylesheet'>

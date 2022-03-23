@@ -9,3 +9,6 @@ First beta with simple single label to be manually filled in.
 - pulsante calcio cloruro
 - etichetta potassio?
 - etichetta Paziente
+
+- db
+- grafica
