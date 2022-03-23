@@ -2,8 +2,6 @@
         (
           '0' => array
             (
-            'patientName' => 'intubazione',
-            'patientID' => '2022000000',
             'warningDrugName' => 'warning',
             'drugName' => 'adrenalina',
             'warningDrugPrep' => '',
@@ -12,8 +10,6 @@
             'drugUnit' => 'mg',
             'drugVol' => '1',
             'drugDil' => '',
-            'signOper' => '',
-            'signTime' => '',
             ),
 
           '1' => array (

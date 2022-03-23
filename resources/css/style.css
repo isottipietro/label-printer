@@ -1,1 +1,67 @@
-* {font-family: Verdana,sans-serif;}
+* {
+  font-family: 'Roboto', sans-serif;
+}
+html, body {
+  height: 100%;
+}
+
+#wrapper {
+  height: calc(100% - 310px);
+}
+
+#header {
+  background-image: url(/resources/images/header.jpg);
+  background-size: contain;
+  height: 190px;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 20px 0 0 20px;
+}
+
+#header h1 {
+  color: #4285F4;
+  font-size: xxx-large;
+  text-shadow: 3px 3px 7px #0000005c;
+  text-transform: uppercase;
+}
+
+#header p {
+  color: #34A853;
+}
+
+
+/* Style tab links */
+#nav {
+  display: flex;
+  background-color: #999;
+}
+
+.tablink {
+  background-color: #999;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 15%;
+}
+
+.urg {
+  background-color: red;
+  margin-left: 40%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  display: none;
+  padding-top: 10px;
+  height: 100%;
+  width: 1000px;
+  margin: auto;
+}

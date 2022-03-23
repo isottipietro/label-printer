@@ -11,42 +11,43 @@ error_reporting(E_ALL);
 
 //import generator function
 require __DIR__ . '/func/label-generator.php';
-//define template to populate
+//define template to populate and empty vars
 $template = __DIR__ . '/templates/syringe-template.php';
-$output = $array = '';
-
+$output = $dataset = '';
+//define source of labels dataset, if exists populate array
 if (!empty($_GET)) {
-  $origin = __DIR__ . '/resources/' . $_GET['set'] . '.txt';
+  $source = __DIR__ . '/resources/' . $_GET['set'] . '.txt';
+  if ( !file_exists( $source ) ) {
+    echo 'ERROR File not exists';
+  } else {
+    $dataset = include $source;
+  }
 }
 
-if (!empty($_POST))
-{
-    // handle post data
-    $_POST["signTime"] = date("d/m/y-H:i");
-    //generate and print label
-    $output.= generate( $template, $_POST );
-    print $output;
-
-
-} else {
-  // chiamata elenco
-  if ( !file_exists( $origin ) ) {
-    return '';
-  } else {
-    $array = include $origin;
-  }
+if (empty($_GET)) {
+  //generate single label whith _POST as source
+  $_POST["signTime"] = date("d/m/y-H:i");
+  $output.= generate( $template, $_POST );
+} elseif ($_GET['set'] == 'urgent') {
   //generate labels for every iteration and print output
-  foreach ($array as $key => $value) {
+  foreach ($dataset as $key => $value) {
     $value["signTime"] = date("d/m/y-H:i");
     $output.= generate( $template, $value );
   }
-  print $output;
+} elseif ($_GET['set'] == 'iot') {
+  //generate labels for every iteration (completing source with _POST) and print output
+  foreach ($dataset as $key => $value) {
+    $value["signTime"] = date("d/m/y-H:i");
+    $value['patientName'] = $_POST['patientName'];
+    $value['patientID'] = $_POST['patientID'];
+    $value['signOper'] = $_POST['signOper'];
+    $output.= generate( $template, $value );
+  }
 }
 
+print $output;
 
 ?>
-
-
 
 <!-- printing script -->
 <script type="text/javascript">
