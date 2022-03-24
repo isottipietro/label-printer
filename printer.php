@@ -14,6 +14,8 @@ require __DIR__ . '/func/label-generator.php';
 //define template to populate and empty vars
 $template = __DIR__ . '/templates/syringe-template.php';
 $output = $dataset = '';
+$fp = fopen('log.txt', 'a');//opens file in append mode
+
 //define source of labels dataset, if exists populate array
 if (!empty($_GET)) {
   $source = __DIR__ . '/resources/' . $_GET['set'] . '.txt';
@@ -28,11 +30,13 @@ if (empty($_GET)) {
   //generate single label whith _POST as source
   $_POST["signTime"] = date("d/m/y-H:i");
   $output.= generate( $template, $_POST );
+  fwrite($fp, $_POST['signOper']." ". $_POST['signTime']. PHP_EOL);
 } elseif ($_GET['set'] == 'urgent') {
   //generate labels for every iteration and print output
   foreach ($dataset as $key => $value) {
     $value["signTime"] = date("d/m/y-H:i");
     $output.= generate( $template, $value );
+    fwrite($fp, $value['signOper']." ".$value['signTime']. PHP_EOL);
   }
 } elseif ($_GET['set'] == 'iot') {
   //generate labels for every iteration (completing source with _POST) and print output
@@ -42,10 +46,14 @@ if (empty($_GET)) {
     $value['patientID'] = $_POST['patientID'];
     $value['signOper'] = $_POST['signOper'];
     $output.= generate( $template, $value );
+    fwrite($fp, $value['signOper']." ".$value['signTime']. PHP_EOL);
   }
 }
 
 print $output;
+
+//log
+fclose($fp);
 
 ?>
 
