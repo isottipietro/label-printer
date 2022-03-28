@@ -3,16 +3,17 @@
 }
 html, body {
   height: 100%;
+  margin: 0px;
 }
 
 #wrapper {
-  height: 650px;
+  min-height: calc(100vh - 77px);
 }
 
 #header {
   background-image: url(/resources/images/header.jpg);
   background-size: contain;
-  height: 190px;
+  height: 160px;
   background-repeat: no-repeat;
   background-position: right;
   padding: 20px 0 0 20px;
@@ -102,4 +103,9 @@ html, body {
 
 .active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+#footer-container {
+  font-size: 0.8em;
+  height: 75px;
 }

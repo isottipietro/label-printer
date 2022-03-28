@@ -13,8 +13,8 @@
 	<meta property="og:image" content="<?php echo $site_image; ?>" />
 </head>
 <body>
-	<?php include 'header.php'; ?>
 	<div id="wrapper">
+		<?php include 'header.php'; ?>
 	<div id="nav">
 		<button class="tablink" onclick="openPage('Singola', this, 'green')" id="defaultOpen">Etichetta Singola</button>
 		<button class="tablink" onclick="openPage('Intubazione', this, 'green')">Intubazione</button>

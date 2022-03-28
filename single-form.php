@@ -66,4 +66,5 @@ Single syringe label form
   Operatore: <input type="text" name="signOper" value="<?php echo $signOper;?>" placeholder="cognome-123456" required>
   <br><br>
   <input type="submit" name="submit" value="Stampa"> <input type="reset">
+  <br><br>
 </form>
