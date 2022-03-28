@@ -41,6 +41,7 @@ Single syringe label form
       <option value="mcg">mcg</option>
       <option value="UI">UI</option>
       <option value="g">g</option>
+      <option value="mEq">mEq</option>
     </select>
      in
     <input type="range" id="drugVol" name="drugVol" min="50" max="250" value="50" step="50" required> <output name="VolO" for="drugVol">50</output> ml di
