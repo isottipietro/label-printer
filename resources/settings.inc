@@ -1,5 +1,5 @@
 <?php
-$site_version = '0.23';
+$site_version = '0.24';
 $site_title = 'Stampa etichette belle!';
 $site_description = 'Piccolo strumento per stampare le etichette delle pompe siringhe in modo sicuro, facile e veloce!';
 $site_author = 'Pietro Isotti';

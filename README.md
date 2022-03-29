@@ -9,3 +9,7 @@ First beta with simple single label to be manually filled in.
 
 - db
 - grafica
+
+#known issues
+- concentration calc flot too many digits
+- 

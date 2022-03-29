@@ -13,8 +13,27 @@
 			<p><?php print $patientName; ?><span class="id"><?php print $patientID; ?></span></p>
 			<p class="barcode"><?php print $patientID; ?></p>
 		</div>
-		<div id="drug" class="<?php print $warningDrug; ?>">
-			<p id="drugname" class="<?php print $warningDrugName; ?>"><?php print $drugName; ?></p>
+		<div id="drug" class="<?php print $warningDrug; ?>"
+			<?php if (strlen($drugName)>10 && strlen($drugName)<=13) {
+			echo "style='padding: 12px 0 12px 0;'";
+		}
+		if (strlen($drugName)>13 && strlen($drugName)<=15) {
+			echo "style='padding: 14px 0 14px 0;'";
+		}
+		if (strlen($drugName)>15) {
+			echo "style='padding: 16px 0 16px 0;'";
+		}?> >
+			<p id="drugname" class="<?php print $warningDrugName; ?>"
+<?php if (strlen($drugName)>10 && strlen($drugName)<=13) {
+	echo "style='font-size: 1.8em;'";
+}
+if (strlen($drugName)>13 && strlen($drugName)<=15) {
+	echo "style='font-size: 1.6em;'";
+}
+if (strlen($drugName)>15) {
+	echo "style='font-size: 1.4em;'";
+}?>
+				><?php print $drugName; ?></p>
 			<div id="preparation" class="<?php print $warningDrugPrep; ?>">
 				<p class="conc">[<?php print $drugConc; ?>]<span class="dilution"><?php print $drugDose; ?><?php print $drugUnit;?>/<?php print $drugVol; ?>ml <?php print $drugDil; ?></span></p>
 			</div>
