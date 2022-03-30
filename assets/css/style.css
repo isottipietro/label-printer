@@ -1,0 +1,188 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+html, body {
+  height: 100%;
+  margin: 0px;
+}
+
+#wrapper {
+  min-height: calc(100vh - 95px);
+}
+
+#header {
+  background-image: url(/assets/images/header.jpg);
+  background-size: contain;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 20px 0 0 20px;
+  color: #5c5c5c;
+}
+
+#header h1 {
+  font-size: xxx-large;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+#header h3 {
+  font-weight: 100;
+  font-style: italic;
+}
+
+
+/* Style tab links */
+#nav {
+  display: flex;
+  background-color: #999;
+}
+
+.tablink {
+  background-color: #999;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 15%;
+}
+
+.urg {
+  background-color: red;
+  margin-left: 40%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  display: none;
+  padding-top: 10px;
+  height: 100%;
+  width: 1000px;
+  margin: auto;
+}
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  overflow: hidden;
+  background-color: white;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+#footer-container {
+  font-size: 0.8em;
+  height: 75px;
+  padding: 0 10px;
+}
+
+fieldset {
+  border-color: #a3a3a3;
+    border-style: solid;
+    border-width: 1px;
+}
+
+input, select {
+  border-style: solid;
+    border-width: 1px;
+    border-color: #222222;
+    padding: 5px;
+    /* box-sizing: border-box; */
+    border-radius: 4px;
+}
+
+input[type=checkbox] {
+  height: 25px;
+  width: 25px;
+  border-style: hidden;
+  background-color: #d3d3d3;
+  vertical-align: middle;
+}
+input:focus{
+  background-color: #ebebeb;
+}
+
+.printbtn {
+  background-image: url(/assets/images/printer.png); /* 16px x 16px */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 3px;  /* equivalent to 'top left' */
+    padding-left: 23px;     /* make text start to the right of the image */
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  height: 20px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  padding: initial;
+  border-style: none;
+  vertical-align: middle;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}

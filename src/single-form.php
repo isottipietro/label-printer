@@ -21,6 +21,7 @@ Single syringe label form
 ?>
 <!-- FORM begins  -->
 <h2>Etichetta singola</h2>
+<div class="form">
 <form method="post" action="printer.php" target="_blank" oninput="VolO.value=Number(drugVol.value);drugConc.value=Number(drugDose.value)/Number(drugVol.value) + drugUnit.value + '/ml'">
   <fieldset>
     <legend>Paziente</legend>
@@ -44,7 +45,7 @@ Single syringe label form
       <option value="mEq">mEq</option>
     </select>
      in
-    <input type="range" id="drugVol" name="drugVol" min="50" max="250" value="50" step="50" required> <output name="VolO" for="drugVol">50</output> ml di
+    <input type="range" id="drugVol" name="drugVol" min="50" max="250" value="50" step="50" required class="slider"> <output name="VolO" for="drugVol">50</output> ml di
     <select id="drugDil" name="drugDil" required>
       <option value="SF" selected>Soluzione Fisiologica</option>
       <option value="G5%">Glucosata 5%</option>
@@ -65,6 +66,6 @@ Single syringe label form
   <br><br>
   Operatore: <input type="text" name="signOper" value="<?php echo $signOper;?>" placeholder="cognome-123456" required>
   <br><br>
-  <input type="submit" name="submit" value="Stampa"> <input type="reset">
+  <input type="submit" name="submit" class="printbtn" value="Stampa"> <input type="reset">
   <br><br>
-</form>
+</form></div>

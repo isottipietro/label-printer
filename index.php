@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-	<?php include 'resources/settings.inc'; ?>
+	<?php include 'etc/settings.inc'; ?>
 	<title><?php echo $site_title; ?></title>
-	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 </head>
 <body>
 	<div id="wrapper">
-		<?php include 'header.php'; ?>
+		<?php include 'src/header.php'; ?>
 	<div id="nav">
 		<button class="tablink" onclick="openPage('Singola', this, 'green')" id="defaultOpen">Etichetta Singola</button>
 		<button class="tablink" onclick="openPage('Intubazione', this, 'green')">Intubazione</button>
@@ -22,18 +22,18 @@
 		<button class="tablink urg" onclick="window.open('/printer.php?set=urgent')">Urgenza!</button>
 	</div>
 	<div id="Singola" class="tabcontent">
-		<?php include 'single-form.php';?>
+		<?php include 'src/single-form.php';?>
 	</div>
 
 	<div id="Intubazione" class="tabcontent">
-		<?php include 'iot-form.php'; ?>
+		<?php include 'src/iot-form.php'; ?>
 	</div>
 
 	<div id="About" class="tabcontent">
-		<?php include 'about.php' ?>
+		<?php include 'src/about.php' ?>
 	</div>
 </div>
-  <?php include 'footer.php';?>
+  <?php include 'src/footer.php';?>
 	<script>
 		function openPage(pageName, elmnt, color) {
 		// Hide all elements with class="tabcontent" by default */

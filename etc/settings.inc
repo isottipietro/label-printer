@@ -1,9 +1,9 @@
 <?php
-$site_version = '0.24';
-$site_title = 'Stampa etichette belle!';
+$site_version = '0.3';
+$site_title = 'Area Critica Generale';
 $site_description = 'Piccolo strumento per stampare le etichette delle pompe siringhe in modo sicuro, facile e veloce!';
 $site_author = 'Pietro Isotti';
-$site_image = 'resources/images/header.jpg';
+$site_image = 'assets/images/header.jpg';
 $log = 'true';
 
 $saggezza = array

@@ -16,7 +16,8 @@
   }
 ?>
 <!-- FORM begins  -->
-<h2>Prepara l'intubazione!</h2>
+<h2>Preparazione per l'intubazione programmata</h2>
+<p>Con questa funzione puoi stampare le etichette precompilate con i farmaci necessari per l'intubazione programmata (secondo le linee guida aziendali).</p>
 <form method="post" action="printer.php?set=iot" target="_blank">
   <fieldset>
     <legend>Paziente</legend>
@@ -28,5 +29,5 @@
   <br><br>
   Operatore: <input type="text" name="signOper" value="<?php echo $signOper;?>" placeholder="cognome-123456" required>
   <br><br>
-  <input type="submit" name="submit" value="Stampa"> <input type="reset">
+  <input type="submit" name="submit" value="Stampa" class="printbtn"> <input type="reset">
 </form>

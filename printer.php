@@ -10,15 +10,15 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 //import generator function
-require __DIR__ . '/func/label-generator.php';
+require __DIR__ . '/src/label-generator.php';
 //define template to populate and empty vars
-$template = __DIR__ . '/templates/syringe-template.php';
+$template = __DIR__ . '/templates/syringe.php';
 $output = $dataset = '';
-$fp = fopen('log.txt', 'a');//opens file in append mode
+$fp = fopen('var/log/log.txt', 'a');//opens file in append mode
 
 //define source of labels dataset, if exists populate array
 if (!empty($_GET)) {
-  $source = __DIR__ . '/resources/' . $_GET['set'] . '.txt';
+  $source = __DIR__ . '/etc/' . $_GET['set'] . '.txt';
   if ( !file_exists( $source ) ) {
     echo 'ERROR File not exists';
   } else {

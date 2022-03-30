@@ -1,14 +1,15 @@
 # label-printer
-Simple tool to generate and print standardized syringe pump labels
-First beta with simple single label to be manually filled in.
+A very simple and easy webapp to generate and print standardized syringe pump labels
+This is the first beta with simple single label to be manually filled in.
 
 
-# todo
-- etichetta potassio?
-- etichetta Paziente
-
-- db
-- grafica
+# Roadmap
+- about page w/ instructions
+- Patient label template
+- settings field to enable/disable debugging, logging...
+- diluent slider whit fixed values (10-20-30-40-50-100-250-500-580)
+- printer.php redesign
+- patient database
 
 # known issues
 - concentration calc float too many digits
