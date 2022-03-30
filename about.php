@@ -3,7 +3,7 @@
 <button type="button" class="collapsible" id="defaultOpen">Cosa c'è scritto nelle etichette?</button>
 <div class="content">
   <p>A prescindere dal metodo di creazione, il layout dell'etichetta rimane invariato. I dati riportati sono i seguenti:</p>
-  <img src="resources/images/esempio.png" style="width: 500px; margin-left: auto; margin-right: auto; display: block;">
+  <img src="resources/images/esempio.png" style="width: 400px; margin-left: auto; margin-right: auto; display: block;">
   <ol>
     <li>Nome e Cognome del paziente</li>
     <li>Numero di ricovero del paziente, viene riportato anche in formato Barcode-128</li>
