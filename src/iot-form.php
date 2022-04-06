@@ -29,5 +29,7 @@
   <br><br>
   Operatore: <input type="text" name="signOper" value="<?php echo $signOper;?>" placeholder="cognome-123456" required>
   <br><br>
+  <div style="float: right;">
   <input type="submit" name="submit" value="Stampa" class="printbtn"> <input type="reset">
+</div>
 </form>

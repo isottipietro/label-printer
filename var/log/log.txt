@@ -1,1 +1,2 @@
-Isotti 137592 24/03/22-09:55
+Etichette generate:
+[set/farmaco] [concentrazione] [operatore] [timestamp]

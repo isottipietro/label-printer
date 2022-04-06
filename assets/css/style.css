@@ -6,6 +6,35 @@ html, body {
   margin: 0px;
 }
 
+h2 {
+  background-color: #ccc;
+  padding: 15px;
+  font-size: large;
+}
+
+button, input[type=submit], input[type=reset] {
+  color: #ffffff;
+  background-color: #0a95ff;
+  box-shadow: inset 0 1px 0 0 hsl(0deg 0% 100% / 40%);
+  position: relative;
+  display: inline-block;
+  padding: 0.8em;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  outline: none;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.15384615;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+button:hover, input[type=submit]:hover, input[type=reset]:hover {
+  background-color: #0074cc;
+}
+
 #wrapper {
   min-height: calc(100vh - 95px);
 }
@@ -120,12 +149,13 @@ fieldset {
 }
 
 input, select {
-  border-style: solid;
-    border-width: 1px;
+  border-style: none;
+    /* border-width: 1px;
     border-color: #222222;
-    padding: 5px;
-    /* box-sizing: border-box; */
-    border-radius: 4px;
+    box-sizing: border-box;
+    border-radius: 4px; */
+  padding: 8px;
+  background-color: #efefef;
 }
 
 input[type=checkbox] {
@@ -135,15 +165,12 @@ input[type=checkbox] {
   background-color: #d3d3d3;
   vertical-align: middle;
 }
-input:focus{
-  background-color: #ebebeb;
-}
 
 .printbtn {
   background-image: url(/assets/images/printer.png); /* 16px x 16px */
     background-repeat: no-repeat;  /* make the background image appear only once */
-    background-position: 3px;  /* equivalent to 'top left' */
-    padding-left: 23px;     /* make text start to the right of the image */
+    background-position: 5px;  /* equivalent to 'top left' */
+    padding-left: 27px !important;     /* make text start to the right of the image */
 }
 
 .slidecontainer {
@@ -185,4 +212,72 @@ input:focus{
   height: 25px; /* Slider handle height */
   background: #04AA6D; /* Green background */
   cursor: pointer; /* Cursor on hover */
+}
+
+input.chk-btn0, input.chk-btn1 {
+  /* position: absolute; */
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 30px -3px 20px;
+}
+
+input.chk-btn0 + label, input.chk-btn1 + label {
+  /* border: 1px solid grey; */
+  padding: 16px 18px 16px 55px;
+  cursor: pointer;
+  /* border-radius: 5px; */
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: 5px !important;
+  background-blend-mode: overlay;
+  white-space: nowrap;
+}
+
+input.chk-btn0 + label {
+  background: #ff73ad1c;
+  background-image: url(/assets/images/female.png);
+}
+
+input.chk-btn1 + label {
+  background: #89beff1f;
+  background-image: url(/assets/images/male.png);
+}
+
+input.chk-btn1:not(:checked) + label:hover {
+  background-color: #89beff54;
+}
+
+input.chk-btn0:not(:checked) + label:hover {
+background-color: #ff73ad36;
+
+}
+
+input.chk-btn0 + label:active,
+input.chk-btn0:checked + label, input.chk-btn1 + label:active,
+input.chk-btn1:checked + label  {
+  background-color: #71c49a7a;
+  font-weight: bold;
+}
+
+table, th, td {
+  border: 1px solid lightgray;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 5px;
+}
+
+button.delbtn {
+  background-color: #ff0000;
+}
+
+.delbtn:hover {
+  background-color: #cd0303;
+}
+
+.patientlabel {
+  display: inline-block;
+  margin: 5px;
 }

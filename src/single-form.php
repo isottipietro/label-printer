@@ -8,16 +8,15 @@ Single syringe label form
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
 
-  // define variables and set to empty values
-  $patientName = $patientNameErr = $patientID = $drugName = $drugConc = $drugDil = $signOper = $warningDrug = $warningDrugPrep = $warningDrugName = "";
+  // Connect to database
+  $con = mysqli_connect("localhost","acg","IjiurMU8!Cko","areacriticagenerale");
+  // Fetch from database list of patients from table
+  $sql = "SELECT * FROM `patients`";
+  $all_patients = mysqli_query($con,$sql);
 
-  // Input validation
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z-' ]*$/",$patientName)) {
-      $PtNameErr = "Consentiti solo lettere e spazi";
-    }
-  }
+  // define variables and set to empty values
+  $patientName = $patientID = $drugName = $drugConc = $drugDil = $signOper = $warningDrug = $warningDrugPrep = $warningDrugName = "";
+
 ?>
 <!-- FORM begins  -->
 <h2>Etichetta singola</h2>
@@ -25,12 +24,21 @@ Single syringe label form
 <form method="post" action="printer.php" target="_blank" oninput="VolO.value=Number(drugVol.value);drugConc.value=Number(drugDose.value)/Number(drugVol.value) + drugUnit.value + '/ml'">
   <fieldset>
     <legend>Paziente</legend>
-    Nome e Cognome: <input type="text" name="patientName" value="<?php echo $patientName;?>" required>
-    <span class="error"><?php echo $patientNameErr;?></span>
-    <br><br>
-    ID ricovero: <input type="number" name="patientID" min="2022000000" max="2123000000" value="<?php echo $patientID;?>" required>
+              <?php
+                  // use a while loop to fetch data
+                  // from the $all_categories variable
+                  // and individually display as an option
+                  while ($patient = mysqli_fetch_array(
+                          $all_patients,MYSQLI_ASSOC)):;
+              ?>
+              <span class="patientlabel">
+              <input type="radio" id='<?php echo $patient["Patient_ID"]; ?>' class='chk-btn<?php echo $patient["Patient_Sex"]; ?>' name="patientID" value='<?php echo $patient["Patient_ID"]; ?>' required>
+              <label for='<?php echo $patient["Patient_ID"]; ?>'><?php echo $patient["Patient_FullName"]; ?></label></span>
+
+              <?php
+            endwhile;
+              ?>
   </fieldset>
-  <br><br>
   <fieldset>
     <legend>Farmaco</legend>
 	  Principio attivo: <input type="text" name="drugName" value="<?php echo $drugName;?>" required>
@@ -61,11 +69,12 @@ Single syringe label form
     <br><input type="checkbox" id="warningDrug" name="warningDrug" value="warning2">
     <label for="warningDrug"> FARMACO - Seleziona questa opzione se il farmaco da somministrare richiede particolare attenzione</label><br>
     <input type="checkbox" id="warningDrugPrep" name="warningDrugPrep" value="warning">
-    <label for="warningDrug"> CONCENTRAZIONE - Seleziona questa opzione se stai preparando una diluizione non standard</label>
+    <label for="warningDrugPrep"> CONCENTRAZIONE - Seleziona questa opzione se stai preparando una diluizione non standard</label>
   </fieldset>
   <br><br>
   Operatore: <input type="text" name="signOper" value="<?php echo $signOper;?>" placeholder="cognome-123456" required>
   <br><br>
+  <div style="float: right;">
   <input type="submit" name="submit" class="printbtn" value="Stampa"> <input type="reset">
-  <br><br>
+</div><br><br>
 </form></div>
