@@ -169,8 +169,8 @@ input[type=checkbox] {
 .printbtn {
   background-image: url(/assets/images/printer.png); /* 16px x 16px */
     background-repeat: no-repeat;  /* make the background image appear only once */
-    background-position: 5px;  /* equivalent to 'top left' */
-    padding-left: 27px !important;     /* make text start to the right of the image */
+    background-position: 10px;  /* equivalent to 'top left' */
+    padding-left: 35px !important;     /* make text start to the right of the image */
 }
 
 .slidecontainer {

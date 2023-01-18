@@ -19,7 +19,7 @@ Single syringe label form
 
 ?>
 <!-- FORM begins  -->
-<h2>Etichetta singola</h2>
+<h2 style="background-color: #9cc1df;">Etichetta singola</h2>
 <div class="form">
 <form method="post" action="printer.php" target="_blank" oninput="VolO.value=Number(drugVol.value);drugConc.value=Number(drugDose.value)/Number(drugVol.value) + drugUnit.value + '/ml'">
   <fieldset>
